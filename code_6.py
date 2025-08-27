@@ -1,4 +1,5 @@
 #first test to the pid
+#implementation of only proportionality constatnt in it
 import pygame
 from sys import exit
 pygame.init()
