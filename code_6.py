@@ -7,21 +7,23 @@ pygame.init()
 # variables
 length,weidth = 2000,700
 error,prev_error = 0,0
-kp,ki,kd = 0.01,0,0.1
+kp,ki,kd = 0.01,0.0000005,0.1
 velocity = 1
 clk = 60
 cf = 0
 setpoint = length - 100
 pid_val = 0
 curr_pos,prev_pos = 0,0
+sum_error = 0
 flag = 1
 
 
 def pid():
-    global cf,clk,kp,ki,kd,error
+    global cf,clk,kp,ki,kd,error,sum_error,setpoint,prev_error
     prev_error = error
     error = setpoint - object_rect.x
-    cf = kp*error + kd*(prev_error-error)
+    sum_error += error
+    cf = kp*error + kd*(prev_error-error) + ki*(sum_error)
     prev_error = error
     return cf
 
