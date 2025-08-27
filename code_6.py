@@ -11,6 +11,8 @@ velocity = 1
 clk = 60
 cf = 0
 setpoint = 800
+pid_val = 0
+curr_pos,prev_pos = 0,0
 def pid():
     global cf,clk,kp,ki,kd,error
     error = setpoint - object_rect.x
@@ -35,7 +37,13 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             exit()
-    object_rect.x += pid()
+    
+    pid_val = pid_val + pid()
+    prev_pos = object_rect.x
+    object_rect.x += pid_val
+    current_pos = object_rect.x
+    if current_pos - prev_pos != 0:
+        pid_val = 0
     screen.blit(object_surface,object_rect)
     clock.tick(clk)
     pygame.display.update()
