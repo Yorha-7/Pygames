@@ -18,7 +18,7 @@ def move_obj():
         add_y = 1
     elif y > 159 - 20:
         add_y = -1
-    if player_rect.colliderect(object_rect):
+    if player_rect.colliderect(object_rect):         # here collision is being checked
         add_x = (-add_x*2) + add_x
         add_y = (-add_y*2) + add_y
     

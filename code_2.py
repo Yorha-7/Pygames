@@ -1,5 +1,5 @@
 #dealing with fps
-# diplaying lobjects on the window
+# diplaying objects on the window
 import pygame
 from sys import exit
 pygame.init()
