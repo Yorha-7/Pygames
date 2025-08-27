@@ -4,3 +4,5 @@ and just say this cool youtube channel known as green code. so if he is using py
 first i will complete the basic to make a enivornment 
 then i will try implementaing pid first, maybe i could make a tuner for the pid letting the user to visualize it.
 its just the idea but i will work on it soon.
+## something about the code_6
+it contains a fine Kp simulationg code.
