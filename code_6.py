@@ -1,5 +1,5 @@
 # first test to the pid
-# implementation of only proportionality constatnt in it
+# implementation of pid constatants in it
 import pygame
 from sys import exit
 import time
@@ -7,9 +7,9 @@ pygame.init()
 # variables
 length,weidth = 2000,700
 error,prev_error = 0,0
-kp,ki,kd = 0.01,0.0000005,0.1
+kp,ki,kd = 0.1,0,0.1
 velocity = 1
-clk = 60
+clk = 60   # dont change it or it will break the code
 cf = 0
 setpoint = length - 100
 pid_val = 0
@@ -59,7 +59,7 @@ while True:
     current_pos = object_rect.x
     if current_pos - prev_pos != 0:
         pid_val = 0
-    if object_rect.colliderect(finish_rect) and flag:
+    if object_rect.colliderect(finish_rect) and flag and pid() == 0: #changeme
         time_text = font.render(f"{str(time.time()-start_time)} seconds",None,'Green')
         screen.blit(time_text,(0,0))
         flag = 0
