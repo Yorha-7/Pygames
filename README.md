@@ -8,3 +8,4 @@ its just the idea but i will work on it soon.
 it contains a fine pid simulation code, though i was not sure about finding efficient way to calculate time only when the start object is completly overlapped to the finish objec and velocity vector is zero, but it would do.
 if you are not using the Ki and want time till velocity vector becomes zero keep it as it is. but if ki is not equal to zero then you should remove the and pid() == 0 part cuz it will take simulation longer to finish
 the line id marked by #changeme
+<img width="2016" height="749" alt="Screenshot from 2025-08-27 14-34-15" src="https://github.com/user-attachments/assets/206e2847-4d2d-441e-bded-199f74fe1aba" />
