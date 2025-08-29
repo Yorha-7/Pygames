@@ -10,5 +10,8 @@ if you are not using the Ki and want time till velocity vector becomes zero keep
 the line id marked by #changeme
 <img width="2016" height="749" alt="Screenshot from 2025-08-27 14-34-15" src="https://github.com/user-attachments/assets/206e2847-4d2d-441e-bded-199f74fe1aba" />
 # Snake game
+you can use the agent.py to run the model and the game considering all dependencies are full fill. 
+even the long hour training the ai model achive a highest score of 61. could be luch of Q factor but whatever, the model takes 11 parametrs as input, with 256 in hidden layer and 3 in output.
+the 11 are the status of the head of the snake that contains things as the previouse direction, danger directions and the location of the food. after the highest score possible learning and performance was looking diminished. the total score algo collected looks less incresisng after some time. and snake was dying mostly due to it gets stuck in a loop.
 
 <img width="1452" height="681" alt="Screenshot from 2025-08-29 20-53-55" src="https://github.com/user-attachments/assets/9946974e-2f89-45ca-998e-437b8ff73015" />
